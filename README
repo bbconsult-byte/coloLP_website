@@ -1,0 +1,9 @@
+# How to use this web app
+
+- Use these commands below
+
+brew insall 
+
+pnpm install
+
+pnpm dev, then click on localhost link in terminal
