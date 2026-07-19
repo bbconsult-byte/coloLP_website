@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
   FileText, Search, Archive, Eye, UserSearch, Zap,
-  CheckCircle, Phone, ArrowRight, Star, MapPin, Shield,
+  CheckCircle, Phone, ArrowRight, MapPin,
   Award, Clock, Users
 } from "lucide-react";
 
@@ -53,40 +53,10 @@ const services = [
 ];
 
 const trustStats = [
-  { value: "20+", label: "Years in Business", icon: Award },
-  { value: "64", label: "Colorado Counties", icon: MapPin },
+  { value: "6+", label: "Years in Business", icon: Award },
+  { value: "6", label: "Colorado Counties", icon: MapPin },
   { value: "15,000+", label: "Documents Served", icon: FileText },
   { value: "98%", label: "On-Time Rate", icon: CheckCircle },
-];
-
-const testimonials = [
-  {
-    quote: "Colorado Legal Process has been our firm's go-to process server for over a decade. Their professionalism and reliability are unmatched in the state.",
-    name: "Sarah M.",
-    title: "Managing Partner, Denver Law Firm",
-    stars: 5,
-  },
-  {
-    quote: "When we needed same-day service on a time-sensitive eviction matter, they came through without hesitation. I won't use anyone else.",
-    name: "James R.",
-    title: "Real Estate Attorney, Colorado Springs",
-    stars: 5,
-  },
-  {
-    quote: "Their skip tracing work located a defendant we'd been trying to find for months. Thorough, discreet, and professional.",
-    name: "Patricia L.",
-    title: "Paralegal, Boulder County",
-    stars: 5,
-  },
-];
-
-const credentials = [
-  "Colorado Licensed Process Server",
-  "NAPPS Member",
-  "Fully Bonded & Insured",
-  "COPSA Member",
-  "20+ Years Experience",
-  "Statewide Coverage",
 ];
 
 export default function Home() {
@@ -131,7 +101,7 @@ export default function Home() {
               className="text-white/80 text-lg leading-relaxed mb-8 animate-fade-in-up animate-delay-200"
               style={{ maxWidth: "520px" }}
             >
-              Professional process serving and investigative services across all 64 Colorado counties. Trusted by attorneys, law firms, and paralegals for over two decades.
+              Professional process serving and investigative services across Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties. Trusted by attorneys, law firms, and paralegals for 6 years.
             </p>
             <div className="flex flex-wrap gap-3 animate-fade-in-up animate-delay-300">
               <Link href="/quote" className="btn-primary">
@@ -145,7 +115,7 @@ export default function Home() {
 
             {/* Quick trust indicators */}
             <div className="flex flex-wrap gap-4 mt-10 animate-fade-in-up animate-delay-400">
-              {["Licensed & Bonded", "All 64 Counties", "Same-Day Available"].map((item) => (
+              {["6 Denver Metro Counties", "Same-Day Available"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-white/70 text-sm">
                   <CheckCircle size={14} className="text-[#B8963E]" />
                   {item}
@@ -258,15 +228,10 @@ export default function Home() {
               </h2>
               <div className="gold-rule" />
               <p className="text-[#3D4F61] text-base leading-relaxed mb-6">
-                When legal matters are on the line, you need a process server you can trust completely. Our team brings over two decades of experience, deep knowledge of Colorado law, and an unwavering commitment to accuracy and timeliness.
+                When legal matters are on the line, you need a process server you can trust completely. Our team brings 6 years of experience, deep knowledge of Colorado law, and an unwavering commitment to accuracy and timeliness.
               </p>
               <div className="space-y-4">
                 {[
-                  {
-                    icon: Shield,
-                    title: "Licensed, Bonded & Insured",
-                    desc: "Full credentials and coverage so your firm is always protected.",
-                  },
                   {
                     icon: Clock,
                     title: "Reliable & On-Time",
@@ -274,8 +239,8 @@ export default function Home() {
                   },
                   {
                     icon: MapPin,
-                    title: "Statewide Coverage",
-                    desc: "All 64 Colorado counties covered — from Denver metro to rural mountain communities.",
+                    title: "Denver Metro Coverage",
+                    desc: "Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties covered.",
                   },
                   {
                     icon: Users,
@@ -316,59 +281,7 @@ export default function Home() {
                   className="w-full h-72 object-cover"
                 />
               </div>
-              {/* Floating credentials card */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded shadow-xl p-5 max-w-xs border-t-4 border-[#B8963E]">
-                <div className="text-xs font-bold text-[#B8963E] uppercase tracking-widest mb-3">
-                  Our Credentials
-                </div>
-                <div className="space-y-1.5">
-                  {credentials.map((cred) => (
-                    <div key={cred} className="flex items-center gap-2 text-xs text-[#1C2B3A]">
-                      <CheckCircle size={12} className="text-[#2E6DA4] shrink-0" />
-                      {cred}
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIALS ── */}
-      <section className="py-16 bg-white">
-        <div className="container">
-          <div className="text-center mb-12">
-            <span className="section-label">Client Testimonials</span>
-            <h2
-              className="text-[#0F2744] mt-2 mb-3"
-              style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.25rem", fontWeight: 700 }}
-            >
-              Trusted by Colorado Legal Professionals
-            </h2>
-            <div className="gold-rule-center" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className="testimonial-card animate-fade-in-up"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <div className="flex gap-0.5 mb-4 mt-2">
-                  {Array.from({ length: t.stars }).map((_, j) => (
-                    <Star key={j} size={14} className="text-[#B8963E] fill-[#B8963E]" />
-                  ))}
-                </div>
-                <p className="text-[#3D4F61] text-sm leading-relaxed mb-5 italic">
-                  "{t.quote}"
-                </p>
-                <div className="border-t border-[#e8eaed] pt-4">
-                  <div className="font-semibold text-[#0F2744] text-sm">{t.name}</div>
-                  <div className="text-[#6B7C8D] text-xs">{t.title}</div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -383,18 +296,16 @@ export default function Home() {
                 className="text-white mt-2 mb-4"
                 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.25rem", fontWeight: 700 }}
               >
-                Serving All of Colorado
+                Serving the Denver Metro Area
               </h2>
               <div className="gold-rule" />
               <p className="text-white/70 text-base leading-relaxed mb-6">
-                From the Denver metro to Colorado's most remote mountain counties, we have the network and resources to serve documents and conduct investigations anywhere in the state.
+                We serve Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties with the same standard of care on every assignment.
               </p>
               <div className="grid grid-cols-2 gap-2 mb-6">
                 {[
-                  "Denver Metro", "Jefferson County", "Arapahoe County",
-                  "Adams County", "Douglas County", "El Paso County",
-                  "Boulder County", "Larimer County", "Weld County",
-                  "Pueblo County", "Mesa County", "La Plata County",
+                  "Adams County", "Arapahoe County", "Boulder County",
+                  "Denver County", "Douglas County", "Jefferson County",
                 ].map((county) => (
                   <div key={county} className="flex items-center gap-2 text-white/70 text-sm">
                     <MapPin size={12} className="text-[#B8963E] shrink-0" />
@@ -402,14 +313,11 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <p className="text-[#B8963E] text-sm font-semibold">
-                + All remaining 52 Colorado counties
-              </p>
             </div>
             <div className="rounded overflow-hidden shadow-2xl">
               <img
                 src="/manus-storage/colorado-mountains_5be37104.jpg"
-                alt="Colorado statewide coverage"
+                alt="Colorado Legal Process service area"
                 className="w-full h-80 object-cover"
               />
             </div>

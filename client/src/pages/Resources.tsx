@@ -15,7 +15,7 @@ const articles = [
   {
     category: "Process Serving",
     title: "What Is Proper Service of Process in Colorado?",
-    excerpt: "Colorado law requires that legal documents be served in a specific manner to be legally valid. Understanding the rules of proper service is essential for attorneys and parties to ensure their cases proceed without procedural challenges.",
+    excerpt: "TBD",
     readTime: "5 min read",
     date: "November 2024",
     slug: "proper-service-colorado",
@@ -23,7 +23,7 @@ const articles = [
   {
     category: "Process Serving",
     title: "How Long Does Process Serving Take in Colorado?",
-    excerpt: "Timelines for process serving in Colorado vary depending on the type of document, the county, and whether the recipient is cooperative. This guide explains standard timelines and what factors can affect service completion.",
+    excerpt: "TBD",
     readTime: "4 min read",
     date: "October 2024",
     slug: "how-long-process-serving",
@@ -31,7 +31,7 @@ const articles = [
   {
     category: "Legal Procedures",
     title: "Colorado Eviction Process: A Step-by-Step Guide",
-    excerpt: "Navigating Colorado's eviction process requires strict adherence to statutory notice requirements and service rules. This guide walks landlords and their attorneys through the proper procedure from notice to judgment.",
+    excerpt: "TBD",
     readTime: "7 min read",
     date: "September 2024",
     slug: "colorado-eviction-process",
@@ -39,7 +39,7 @@ const articles = [
   {
     category: "Skip Tracing",
     title: "When Can You Use Substituted Service in Colorado?",
-    excerpt: "When a defendant cannot be personally served, Colorado courts allow substituted service under certain conditions. Learn when substituted service is permitted and how to properly document it for court.",
+    excerpt: "TBD",
     readTime: "4 min read",
     date: "August 2024",
     slug: "substituted-service-colorado",
@@ -47,7 +47,7 @@ const articles = [
   {
     category: "Investigations",
     title: "What Is Skip Tracing and When Do You Need It?",
-    excerpt: "Skip tracing is the process of locating a person who has 'skipped' their last known address. This article explains how professional skip tracing works, the databases and techniques used, and when it's appropriate to use this service.",
+    excerpt: "TBD",
     readTime: "5 min read",
     date: "July 2024",
     slug: "what-is-skip-tracing",
@@ -55,7 +55,7 @@ const articles = [
   {
     category: "Legal Procedures",
     title: "Serving a Business Entity in Colorado: What You Need to Know",
-    excerpt: "Serving a corporation, LLC, or other business entity in Colorado has specific requirements under state law. This guide covers how to properly serve registered agents, officers, and what to do when a business has no registered agent.",
+    excerpt: "TBD",
     readTime: "6 min read",
     date: "June 2024",
     slug: "serving-business-entity-colorado",
@@ -84,8 +84,8 @@ const faqs = [
     a: "If a person refuses to accept documents, our process server will identify themselves and inform the person that service is being made. Under Colorado law, if a person is identified and refuses to accept documents, the server may leave the documents near the person. This constitutes valid service. The refusal and circumstances are documented in the affidavit.",
   },
   {
-    q: "Do you serve documents in rural Colorado counties?",
-    a: "Yes. We serve all 64 Colorado counties, including rural and mountain communities. We have a network of licensed process servers throughout the state. Note that service in remote areas may take longer and may incur additional mileage fees, which will be disclosed upfront in your quote.",
+    q: "Which Colorado counties do you serve?",
+    a: "We currently serve Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties.",
   },
   {
     q: "What is the difference between personal service and substituted service?",

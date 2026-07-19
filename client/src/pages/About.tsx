@@ -6,63 +6,9 @@ import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
-  Shield, CheckCircle, Award, Users, MapPin, ArrowRight,
-  Phone, Star, Target, Eye, Lock
+  MapPin, ArrowRight,
+  Phone, Target, Eye
 } from "lucide-react";
-
-const teamMembers = [
-  {
-    name: "Robert J. Harmon",
-    title: "Founder & Lead Process Server",
-    bio: "With over 20 years serving Colorado's legal community, Robert founded the company with a single mission: to provide attorneys and law firms with a process serving partner they can trust completely. Licensed, certified, and deeply experienced in Colorado civil procedure.",
-    initials: "RH",
-  },
-  {
-    name: "Maria Elena Castillo",
-    title: "Senior Investigator",
-    bio: "A former law enforcement professional with 15 years of investigative experience. Maria leads our investigative division, specializing in skip tracing, surveillance, and background investigations for litigation support.",
-    initials: "MC",
-  },
-  {
-    name: "David K. Thornton",
-    title: "Operations Manager",
-    bio: "David coordinates our statewide network of process servers and ensures every assignment is handled with precision and accountability. His background in legal administration ensures our documentation meets the highest court standards.",
-    initials: "DT",
-  },
-];
-
-const credentials = [
-  {
-    icon: Shield,
-    title: "Colorado Licensed Process Server",
-    desc: "Fully licensed by the State of Colorado to serve legal process in all state and federal courts.",
-  },
-  {
-    icon: Award,
-    title: "NAPPS Member",
-    desc: "Member of the National Association of Professional Process Servers — the gold standard in the industry.",
-  },
-  {
-    icon: Shield,
-    title: "COPSA Member",
-    desc: "Active member of the Colorado Process Servers Association, upholding state-specific professional standards.",
-  },
-  {
-    icon: Lock,
-    title: "Fully Bonded & Insured",
-    desc: "Comprehensive bonding and professional liability insurance protecting you and your clients on every assignment.",
-  },
-  {
-    icon: CheckCircle,
-    title: "E&O Insurance",
-    desc: "Errors & Omissions coverage providing an additional layer of protection for your legal matters.",
-  },
-  {
-    icon: Users,
-    title: "Background-Checked Staff",
-    desc: "All team members undergo thorough background checks and ongoing training to maintain our standards.",
-  },
-];
 
 const whyChooseUs = [
   {
@@ -77,8 +23,8 @@ const whyChooseUs = [
   },
   {
     icon: MapPin,
-    title: "True Statewide Coverage",
-    desc: "Unlike services that only cover the Denver metro, we have established networks in all 64 Colorado counties — from Telluride to Yuma, from Fort Collins to Pueblo.",
+    title: "Focused Denver Metro Coverage",
+    desc: "We serve Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties with deep local knowledge of each county's courts and procedures.",
   },
   {
     icon: Phone,
@@ -108,7 +54,7 @@ export default function About() {
             </h1>
             <div className="gold-rule" />
             <p className="text-white/75 text-base leading-relaxed">
-              For over two decades, we've been the process serving and investigative services company that Colorado's legal community relies on when accuracy, reliability, and discretion are non-negotiable.
+              For 6 years, we've been the process serving and investigative services company that Colorado's legal community relies on when accuracy, reliability, and discretion are non-negotiable.
             </p>
           </div>
         </div>
@@ -130,13 +76,13 @@ export default function About() {
               <div className="gold-rule" />
               <div className="space-y-4 text-[#3D4F61] text-base leading-relaxed">
                 <p>
-                  Colorado Legal Process & Investigations was founded in 2004 by Robert J. Harmon, a former paralegal who recognized a critical gap in the market: Colorado's legal community needed a process serving company that combined the reliability of a large firm with the personal attention of a local partner.
+                  Colorado Legal Process & Investigations was founded in 2020 by Robert J. Harmon, a former paralegal who recognized a critical gap in the market: Colorado's legal community needed a process serving company that combined the reliability of a large firm with the personal attention of a local partner.
                 </p>
                 <p>
                   Starting with just a handful of clients in the Denver metro area, we built our reputation one assignment at a time — through meticulous documentation, prompt communication, and an unwavering commitment to getting it right. Word spread quickly among Colorado's legal community, and our client base grew to include some of the state's most respected law firms.
                 </p>
                 <p>
-                  Today, we serve all 64 Colorado counties with a network of licensed professionals who share our founding values. Whether it's a routine civil summons in Denver or a complex surveillance operation in a rural mountain county, we bring the same standard of excellence to every assignment.
+                  Today, we serve Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties with a network of licensed professionals who share our founding values. Whether it's a routine civil summons in Denver or a background investigation in Boulder, we bring the same standard of excellence to every assignment.
                 </p>
               </div>
             </div>
@@ -152,8 +98,8 @@ export default function About() {
               <div className="absolute -bottom-6 -right-4 bg-[#0F2744] rounded-lg p-5 shadow-xl">
                 <div className="grid grid-cols-2 gap-4 text-center">
                   {[
-                    { value: "20+", label: "Years" },
-                    { value: "64", label: "Counties" },
+                    { value: "6", label: "Years" },
+                    { value: "6", label: "Counties" },
                     { value: "15K+", label: "Served" },
                     { value: "98%", label: "On-Time" },
                   ].map((stat) => (
@@ -228,88 +174,6 @@ export default function About() {
                       <p className="text-[#3D4F61] text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── TEAM ── */}
-      <section className="py-16 bg-white">
-        <div className="container">
-          <div className="text-center mb-12">
-            <span className="section-label">Our Team</span>
-            <h2
-              className="text-[#0F2744] mt-2 mb-3"
-              style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.25rem", fontWeight: 700 }}
-            >
-              Experienced Legal Professionals
-            </h2>
-            <div className="gold-rule-center" />
-            <p className="text-[#3D4F61] max-w-xl mx-auto text-base">
-              Our team combines decades of experience in legal services, law enforcement, and investigative work to deliver results you can rely on.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {teamMembers.map((member, i) => (
-              <div
-                key={member.name}
-                className="bg-[#F4F5F7] rounded-lg border border-[#e8eaed] p-6 text-center animate-fade-in-up"
-                style={{ animationDelay: `${i * 80}ms` }}
-              >
-                <div
-                  className="w-16 h-16 rounded-full bg-[#0F2744] flex items-center justify-center mx-auto mb-4 text-[#B8963E] font-bold text-xl"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  {member.initials}
-                </div>
-                <h3
-                  className="font-bold text-[#0F2744] text-lg mb-0.5"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  {member.name}
-                </h3>
-                <p className="text-[#B8963E] text-xs font-semibold uppercase tracking-wide mb-3">
-                  {member.title}
-                </p>
-                <p className="text-[#3D4F61] text-sm leading-relaxed">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CREDENTIALS ── */}
-      <section className="py-16 bg-[#F4F5F7]">
-        <div className="container">
-          <div className="text-center mb-12">
-            <span className="section-label">Licensing & Credentials</span>
-            <h2
-              className="text-[#0F2744] mt-2 mb-3"
-              style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.25rem", fontWeight: 700 }}
-            >
-              Fully Licensed, Bonded & Insured
-            </h2>
-            <div className="gold-rule-center" />
-            <p className="text-[#3D4F61] max-w-xl mx-auto text-base">
-              Our credentials ensure that every assignment is handled by qualified professionals and that your firm is protected on every engagement.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {credentials.map((cred, i) => {
-              const Icon = cred.icon;
-              return (
-                <div
-                  key={cred.title}
-                  className="bg-white rounded-lg border border-[#e8eaed] p-5 border-t-4 border-t-[#B8963E] animate-fade-in-up"
-                  style={{ animationDelay: `${i * 60}ms` }}
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <Icon size={18} className="text-[#B8963E]" />
-                    <h4 className="font-bold text-[#0F2744] text-sm">{cred.title}</h4>
-                  </div>
-                  <p className="text-[#3D4F61] text-sm leading-relaxed">{cred.desc}</p>
                 </div>
               );
             })}

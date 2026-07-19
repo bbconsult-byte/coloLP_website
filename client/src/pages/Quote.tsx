@@ -22,16 +22,7 @@ const serviceOptions = [
 ];
 
 const coloradoCounties = [
-  "Adams", "Alamosa", "Arapahoe", "Archuleta", "Baca", "Bent", "Boulder",
-  "Broomfield", "Chaffee", "Cheyenne", "Clear Creek", "Conejos", "Costilla",
-  "Crowley", "Custer", "Delta", "Denver", "Dolores", "Douglas", "Eagle",
-  "El Paso", "Elbert", "Fremont", "Garfield", "Gilpin", "Grand", "Gunnison",
-  "Hinsdale", "Huerfano", "Jackson", "Jefferson", "Kiowa", "Kit Carson",
-  "La Plata", "Lake", "Larimer", "Las Animas", "Lincoln", "Logan", "Mesa",
-  "Mineral", "Moffat", "Montezuma", "Montrose", "Morgan", "Otero", "Ouray",
-  "Park", "Phillips", "Pitkin", "Prowers", "Pueblo", "Rio Blanco", "Rio Grande",
-  "Routt", "Saguache", "San Juan", "San Miguel", "Sedgwick", "Summit",
-  "Teller", "Washington", "Weld", "Yuma",
+  "Adams", "Arapahoe", "Boulder", "Denver", "Douglas", "Jefferson",
 ];
 
 export default function Quote() {
@@ -101,10 +92,10 @@ export default function Quote() {
             </div>
             <div className="w-px h-8 bg-[#e8eaed] hidden sm:block" />
             <div className="text-sm text-[#3D4F61]">
-              <span className="font-semibold text-[#0F2744]">Response within 1 hour</span> · Mon–Fri 7am–7pm · Sat 8am–4pm
+              <span className="font-semibold text-[#0F2744]">Response within 1 hour</span> · Mon–Sun 8am–5pm
             </div>
             <div className="ml-auto hidden md:flex items-center gap-4 text-xs text-[#6B7C8D]">
-              {["Licensed & Bonded", "GPS-Verified", "Court-Admissible"].map(t => (
+              {["GPS-Verified", "Court-Admissible"].map(t => (
                 <span key={t} className="flex items-center gap-1.5"><CheckCircle size={11} className="text-[#2E6DA4]" />{t}</span>
               ))}
             </div>
@@ -381,7 +372,7 @@ export default function Quote() {
                   (720) 555-0192
                 </a>
                 <p className="text-white/50 text-xs text-center">
-                  Mon–Fri 7am–7pm · Sat 8am–4pm
+                  Mon–Sun 8am–5pm
                 </p>
               </div>
 
@@ -394,7 +385,6 @@ export default function Quote() {
                   {[
                     { icon: Clock, text: "Response within 1 business hour" },
                     { icon: CheckCircle, text: "Transparent, upfront pricing" },
-                    { icon: Shield, text: "Licensed & bonded professionals" },
                     { icon: CheckCircle, text: "GPS-verified proof of service" },
                     { icon: Clock, text: "Real-time status updates" },
                     { icon: CheckCircle, text: "Court-admissible affidavits" },
@@ -417,7 +407,7 @@ export default function Quote() {
                   <span className="font-bold text-[#0F2744] text-sm">Rush Service Available</span>
                 </div>
                 <p className="text-[#3D4F61] text-xs leading-relaxed">
-                  Same-day and next-day service available statewide. Select "Same-Day" or "Rush" above, or call us directly to confirm availability in your county.
+                  Same-day and next-day service available across our service area. Select "Same-Day" or "Rush" above, or call us directly to confirm availability in your county.
                 </p>
               </div>
 
@@ -427,7 +417,7 @@ export default function Quote() {
                   Service Area
                 </h4>
                 <p className="text-[#3D4F61] text-xs leading-relaxed">
-                  We serve all 64 Colorado counties, including Denver, Jefferson, Arapahoe, Adams, Douglas, El Paso, Boulder, Larimer, Weld, Pueblo, Mesa, and all rural and mountain counties.
+                  We serve Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties.
                 </p>
               </div>
             </div>

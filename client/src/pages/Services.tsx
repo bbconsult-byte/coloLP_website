@@ -49,7 +49,7 @@ const services = [
     icon: Archive,
     title: "Court Filing",
     subtitle: "Document Preparation & Filing",
-    desc: "We handle the filing of legal documents with Colorado state and federal courts, including the Denver District Court, Colorado Court of Appeals, and county courts statewide. Our team ensures documents are properly formatted, filed on time, and conformed copies are returned promptly.",
+    desc: "We handle the filing of legal documents with Colorado state and federal courts, including the Denver District Court, Colorado Court of Appeals, and county courts in our service area. Our team ensures documents are properly formatted, filed on time, and conformed copies are returned promptly.",
     features: [
       "State court filings (all counties)",
       "Federal court filings",
@@ -107,7 +107,7 @@ const services = [
       "Real-time status updates",
       "After-hours availability",
       "Weekend service",
-      "Statewide rush coverage",
+      "Rush coverage across our 6 service counties",
       "Priority queue handling",
       "Immediate confirmation",
     ],
@@ -302,11 +302,9 @@ export default function Services() {
           <div className="flex flex-wrap justify-center gap-4">
             {[
               { icon: Shield, label: "Colorado Licensed Process Server" },
-              { icon: Shield, label: "NAPPS Member" },
               { icon: Shield, label: "Fully Bonded & Insured" },
-              { icon: Shield, label: "COPSA Member" },
-              { icon: CheckCircle, label: "20+ Years Experience" },
-              { icon: CheckCircle, label: "All 64 Counties" },
+              { icon: CheckCircle, label: "6+ Years Experience" },
+              { icon: CheckCircle, label: "All Denver Metro Counties" },
             ].map((item) => {
               const Icon = item.icon;
               return (
