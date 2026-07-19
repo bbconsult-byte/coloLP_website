@@ -77,7 +77,7 @@ These follow directly from Rory's confirmed instructions and are being applied i
 | 4 | Remove Contact page address + map | `content/remove-contact-address-map` | Contact.tsx (also drops the Google Maps/Forge API key dependency flagged earlier) |
 
 
-| 5 | Remove Resources "Forms & Reference Guides" section | `content/remove-resources-downloads` | Resources.tsx |
+| 5 | Remove Resources "Forms & Reference Guides" section, just removed the articles descriptions | `content/remove-resources-downloads` | Resources.tsx |
 
 ---
 
@@ -228,3 +228,17 @@ Line 78: <span>Mon–Fri: 7am–7pm<br />Sat: 8am–4pm</span> → <span>Mon–S
 client/src/pages/Quote.tsx
 Line 95: <span className="font-semibold text-[#0F2744]">Response within 1 hour</span> · Mon–Fri 7am–7pm · Sat 8am–4pm → · Mon–Sun 8am–5pm
 Line 375: Mon–Fri 7am–7pm · Sat 8am–4pm → Mon–Sun 8am–5pm
+
+
+### Issue 5  Remove Resources "Forms & Reference Guides" section, and removed the articles descriptions
+client/src/pages/Resources.tsx
+Deleted lines 100–125 — the downloads const array.
+Deleted lines 273–317 — the entire "── DOWNLOADS ──" section.
+Line 9 import: removed FileText and Download (both became unused after the above deletion). Left BookOpen in place — it was already unused before this ticket, out of scope here.
+Articles: kept category, title, readTime, date, and slug for all 6 entries — replaced only the excerpt value with "TBD" in each:
+Line 18 — Process Serving / "What Is Proper Service of Process in Colorado?"
+Line 26 — Process Serving / "How Long Does Process Serving Take in Colorado?"
+Line 34 — Legal Procedures / "Colorado Eviction Process: A Step-by-Step Guide"
+Line 42 — Skip Tracing / "When Can You Use Substituted Service in Colorado?"
+Line 50 — Investigations / "What Is Skip Tracing and When Do You Need It?"
+Line 58 — Legal Procedures / "Serving a Business Entity in Colorado: What You Need to Know"
