@@ -3,7 +3,7 @@
    Design: Measured Authority — deep navy, gold accents
    ============================================================ */
 import { Link } from "wouter";
-import { Phone, Mail, MapPin, Clock, Shield, Facebook, Linkedin, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Linkedin, Twitter } from "lucide-react";
 
 const serviceLinks = [
   { href: "/services", label: "Process Serving" },
@@ -58,7 +58,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-5">
-              Colorado's trusted process serving and investigative services partner. Licensed, bonded, and serving Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties.
+              Colorado's trusted process serving and investigative services partner. Serving Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties.
             </p>
             <div className="space-y-2.5 text-sm">
               <a href="tel:7205550192" className="flex items-center gap-2.5 text-white/70 hover:text-[#B8963E] transition-colors">
@@ -130,31 +130,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-
-            {/* Credentials */}
-            <div className="mt-6">
-              <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-3 pb-2 border-b border-white/10">
-                Credentials
-              </h4>
-              <div className="space-y-2 text-sm text-white/60">
-                <div className="flex items-center gap-2">
-                  <Shield size={13} className="text-[#B8963E] shrink-0" />
-                  Colorado Licensed Process Server
-                </div>
-                <div className="flex items-center gap-2">
-                  <Shield size={13} className="text-[#B8963E] shrink-0" />
-                  NAPPS Member
-                </div>
-                <div className="flex items-center gap-2">
-                  <Shield size={13} className="text-[#B8963E] shrink-0" />
-                  Fully Bonded & Insured
-                </div>
-                <div className="flex items-center gap-2">
-                  <Shield size={13} className="text-[#B8963E] shrink-0" />
-                  COPSA Member
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Column 4: Service Area */}
