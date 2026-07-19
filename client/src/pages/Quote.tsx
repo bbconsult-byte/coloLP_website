@@ -22,16 +22,7 @@ const serviceOptions = [
 ];
 
 const coloradoCounties = [
-  "Adams", "Alamosa", "Arapahoe", "Archuleta", "Baca", "Bent", "Boulder",
-  "Broomfield", "Chaffee", "Cheyenne", "Clear Creek", "Conejos", "Costilla",
-  "Crowley", "Custer", "Delta", "Denver", "Dolores", "Douglas", "Eagle",
-  "El Paso", "Elbert", "Fremont", "Garfield", "Gilpin", "Grand", "Gunnison",
-  "Hinsdale", "Huerfano", "Jackson", "Jefferson", "Kiowa", "Kit Carson",
-  "La Plata", "Lake", "Larimer", "Las Animas", "Lincoln", "Logan", "Mesa",
-  "Mineral", "Moffat", "Montezuma", "Montrose", "Morgan", "Otero", "Ouray",
-  "Park", "Phillips", "Pitkin", "Prowers", "Pueblo", "Rio Blanco", "Rio Grande",
-  "Routt", "Saguache", "San Juan", "San Miguel", "Sedgwick", "Summit",
-  "Teller", "Washington", "Weld", "Yuma",
+  "Adams", "Arapahoe", "Boulder", "Denver", "Douglas", "Jefferson",
 ];
 
 export default function Quote() {
@@ -417,7 +408,7 @@ export default function Quote() {
                   <span className="font-bold text-[#0F2744] text-sm">Rush Service Available</span>
                 </div>
                 <p className="text-[#3D4F61] text-xs leading-relaxed">
-                  Same-day and next-day service available statewide. Select "Same-Day" or "Rush" above, or call us directly to confirm availability in your county.
+                  Same-day and next-day service available across our service area. Select "Same-Day" or "Rush" above, or call us directly to confirm availability in your county.
                 </p>
               </div>
 
@@ -427,7 +418,7 @@ export default function Quote() {
                   Service Area
                 </h4>
                 <p className="text-[#3D4F61] text-xs leading-relaxed">
-                  We serve all 64 Colorado counties, including Denver, Jefferson, Arapahoe, Adams, Douglas, El Paso, Boulder, Larimer, Weld, Pueblo, Mesa, and all rural and mountain counties.
+                  We serve Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties.
                 </p>
               </div>
             </div>

@@ -84,8 +84,8 @@ const faqs = [
     a: "If a person refuses to accept documents, our process server will identify themselves and inform the person that service is being made. Under Colorado law, if a person is identified and refuses to accept documents, the server may leave the documents near the person. This constitutes valid service. The refusal and circumstances are documented in the affidavit.",
   },
   {
-    q: "Do you serve documents in rural Colorado counties?",
-    a: "Yes. We serve all 64 Colorado counties, including rural and mountain communities. We have a network of licensed process servers throughout the state. Note that service in remote areas may take longer and may incur additional mileage fees, which will be disclosed upfront in your quote.",
+    q: "Which Colorado counties do you serve?",
+    a: "We currently serve Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties.",
   },
   {
     q: "What is the difference between personal service and substituted service?",
