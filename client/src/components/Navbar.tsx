@@ -71,7 +71,7 @@ export default function Navbar() {
               </span>
             </div>
             <div className="text-white/60 text-xs hidden md:block">
-              Serving Adams, Arapahoe, Boulder, Denver, Douglas & Jefferson · Licensed & Bonded
+              Serving Adams, Arapahoe, Boulder, Denver, Douglas & Jefferson
             </div>
           </div>
         </div>

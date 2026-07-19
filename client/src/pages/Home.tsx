@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
   FileText, Search, Archive, Eye, UserSearch, Zap,
-  CheckCircle, Phone, ArrowRight, Star, MapPin, Shield,
+  CheckCircle, Phone, ArrowRight, MapPin,
   Award, Clock, Users
 } from "lucide-react";
 
@@ -57,36 +57,6 @@ const trustStats = [
   { value: "6", label: "Colorado Counties", icon: MapPin },
   { value: "15,000+", label: "Documents Served", icon: FileText },
   { value: "98%", label: "On-Time Rate", icon: CheckCircle },
-];
-
-const testimonials = [
-  {
-    quote: "Colorado Legal Process has been our firm's go-to process server for over a decade. Their professionalism and reliability are unmatched in the state.",
-    name: "Sarah M.",
-    title: "Managing Partner, Denver Law Firm",
-    stars: 5,
-  },
-  {
-    quote: "When we needed same-day service on a time-sensitive eviction matter, they came through without hesitation. I won't use anyone else.",
-    name: "James R.",
-    title: "Real Estate Attorney, Colorado Springs",
-    stars: 5,
-  },
-  {
-    quote: "Their skip tracing work located a defendant we'd been trying to find for months. Thorough, discreet, and professional.",
-    name: "Patricia L.",
-    title: "Paralegal, Boulder County",
-    stars: 5,
-  },
-];
-
-const credentials = [
-  "Colorado Licensed Process Server",
-  "NAPPS Member",
-  "Fully Bonded & Insured",
-  "COPSA Member",
-  "20+ Years Experience",
-  "Statewide Coverage",
 ];
 
 export default function Home() {
@@ -145,7 +115,7 @@ export default function Home() {
 
             {/* Quick trust indicators */}
             <div className="flex flex-wrap gap-4 mt-10 animate-fade-in-up animate-delay-400">
-              {["Licensed & Bonded", "6 Denver Metro Counties", "Same-Day Available"].map((item) => (
+              {["6 Denver Metro Counties", "Same-Day Available"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-white/70 text-sm">
                   <CheckCircle size={14} className="text-[#B8963E]" />
                   {item}
@@ -263,11 +233,6 @@ export default function Home() {
               <div className="space-y-4">
                 {[
                   {
-                    icon: Shield,
-                    title: "Licensed, Bonded & Insured",
-                    desc: "Full credentials and coverage so your firm is always protected.",
-                  },
-                  {
                     icon: Clock,
                     title: "Reliable & On-Time",
                     desc: "98% on-time service rate with real-time status updates on every assignment.",
@@ -316,59 +281,7 @@ export default function Home() {
                   className="w-full h-72 object-cover"
                 />
               </div>
-              {/* Floating credentials card */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded shadow-xl p-5 max-w-xs border-t-4 border-[#B8963E]">
-                <div className="text-xs font-bold text-[#B8963E] uppercase tracking-widest mb-3">
-                  Our Credentials
-                </div>
-                <div className="space-y-1.5">
-                  {credentials.map((cred) => (
-                    <div key={cred} className="flex items-center gap-2 text-xs text-[#1C2B3A]">
-                      <CheckCircle size={12} className="text-[#2E6DA4] shrink-0" />
-                      {cred}
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIALS ── */}
-      <section className="py-16 bg-white">
-        <div className="container">
-          <div className="text-center mb-12">
-            <span className="section-label">Client Testimonials</span>
-            <h2
-              className="text-[#0F2744] mt-2 mb-3"
-              style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.25rem", fontWeight: 700 }}
-            >
-              Trusted by Colorado Legal Professionals
-            </h2>
-            <div className="gold-rule-center" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className="testimonial-card animate-fade-in-up"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <div className="flex gap-0.5 mb-4 mt-2">
-                  {Array.from({ length: t.stars }).map((_, j) => (
-                    <Star key={j} size={14} className="text-[#B8963E] fill-[#B8963E]" />
-                  ))}
-                </div>
-                <p className="text-[#3D4F61] text-sm leading-relaxed mb-5 italic">
-                  "{t.quote}"
-                </p>
-                <div className="border-t border-[#e8eaed] pt-4">
-                  <div className="font-semibold text-[#0F2744] text-sm">{t.name}</div>
-                  <div className="text-[#6B7C8D] text-xs">{t.title}</div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

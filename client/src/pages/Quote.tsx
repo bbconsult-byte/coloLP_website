@@ -95,7 +95,7 @@ export default function Quote() {
               <span className="font-semibold text-[#0F2744]">Response within 1 hour</span> · Mon–Fri 7am–7pm · Sat 8am–4pm
             </div>
             <div className="ml-auto hidden md:flex items-center gap-4 text-xs text-[#6B7C8D]">
-              {["Licensed & Bonded", "GPS-Verified", "Court-Admissible"].map(t => (
+              {["GPS-Verified", "Court-Admissible"].map(t => (
                 <span key={t} className="flex items-center gap-1.5"><CheckCircle size={11} className="text-[#2E6DA4]" />{t}</span>
               ))}
             </div>
@@ -385,7 +385,6 @@ export default function Quote() {
                   {[
                     { icon: Clock, text: "Response within 1 business hour" },
                     { icon: CheckCircle, text: "Transparent, upfront pricing" },
-                    { icon: Shield, text: "Licensed & bonded professionals" },
                     { icon: CheckCircle, text: "GPS-verified proof of service" },
                     { icon: Clock, text: "Real-time status updates" },
                     { icon: CheckCircle, text: "Court-admissible affidavits" },
