@@ -6,8 +6,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Phone, Mail, MapPin, Clock, CheckCircle, ArrowRight } from "lucide-react";
-import { MapView } from "@/components/Map";
+import { Phone, Mail, Clock, CheckCircle, ArrowRight } from "lucide-react";
 
 const coloradoCounties = [
   "Adams", "Arapahoe", "Boulder", "Denver", "Douglas", "Jefferson",
@@ -91,18 +90,6 @@ export default function Contact() {
                       </div>
                     </div>
                   </a>
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded bg-[#B8963E]/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <MapPin size={14} className="text-[#B8963E]" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-white/50 uppercase tracking-wide mb-0.5">Address</div>
-                      <div className="text-white text-sm leading-relaxed">
-                        1700 Lincoln Street, Suite 2000<br />
-                        Denver, CO 80203
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -114,9 +101,7 @@ export default function Contact() {
                 </div>
                 <div className="space-y-2 text-sm">
                   {[
-                    { day: "Monday – Friday", hours: "7:00 AM – 7:00 PM" },
-                    { day: "Saturday", hours: "8:00 AM – 4:00 PM" },
-                    { day: "Sunday", hours: "Closed (Emergency only)" },
+                    { day: "Monday – Sunday", hours: "8:00 AM – 5:00 PM" },
                   ].map((row) => (
                     <div key={row.day} className="flex justify-between items-center py-1.5 border-b border-[#e8eaed] last:border-0">
                       <span className="text-[#3D4F61]">{row.day}</span>
@@ -240,38 +225,6 @@ export default function Contact() {
                     </div>
                   </form>
                 )}
-              </div>
-
-              {/* Map */}
-              <div className="bg-white rounded-lg border border-[#e8eaed] overflow-hidden shadow-sm">
-                <div className="px-7 py-5 border-b border-[#e8eaed] bg-[#F4F5F7]">
-                  <h3 className="font-bold text-[#0F2744] text-base" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    Our Location
-                  </h3>
-                  <p className="text-[#6B7C8D] text-xs mt-0.5">1700 Lincoln Street, Suite 2000 · Denver, CO 80203</p>
-                </div>
-                <div style={{ height: "300px" }}>
-                  <MapView
-                    onMapReady={(map) => {
-                      const geocoder = new google.maps.Geocoder();
-                      geocoder.geocode(
-                        { address: "1700 Lincoln Street, Denver, CO 80203" },
-                        (results, status) => {
-                          if (status === "OK" && results && results[0]) {
-                            const location = results[0].geometry.location;
-                            map.setCenter(location);
-                            map.setZoom(15);
-                            new google.maps.Marker({
-                              position: location,
-                              map,
-                              title: "Colorado Legal Process & Investigations",
-                            });
-                          }
-                        }
-                      );
-                    }}
-                  />
-                </div>
               </div>
             </div>
           </div>

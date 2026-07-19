@@ -92,7 +92,7 @@ export default function Quote() {
             </div>
             <div className="w-px h-8 bg-[#e8eaed] hidden sm:block" />
             <div className="text-sm text-[#3D4F61]">
-              <span className="font-semibold text-[#0F2744]">Response within 1 hour</span> · Mon–Fri 7am–7pm · Sat 8am–4pm
+              <span className="font-semibold text-[#0F2744]">Response within 1 hour</span> · Mon–Sun 8am–5pm
             </div>
             <div className="ml-auto hidden md:flex items-center gap-4 text-xs text-[#6B7C8D]">
               {["GPS-Verified", "Court-Admissible"].map(t => (
@@ -372,7 +372,7 @@ export default function Quote() {
                   (720) 555-0192
                 </a>
                 <p className="text-white/50 text-xs text-center">
-                  Mon–Fri 7am–7pm · Sat 8am–4pm
+                  Mon–Sun 8am–5pm
                 </p>
               </div>
 

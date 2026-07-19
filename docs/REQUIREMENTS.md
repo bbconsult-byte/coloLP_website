@@ -83,7 +83,7 @@ These follow directly from Rory's confirmed instructions and are being applied i
 
 ## PART 2 — Blocked on verification (need input before I can finish)
 
-Nothing below is being changed yet — these need real values from Buddy/Rory.
+Nothing below is being changed yisset — these need real values from Buddy/Rory.
 
 | # | Item | What I need | Affects |
 |---|------|-------------|---------|
@@ -108,7 +108,7 @@ Nothing below is being changed yet — these need real values from Buddy/Rory.
 - `%VITE_ANALYTICS_*%` script in `client/index.html` still needs real env vars or removal.
 
 
-Issue 1:
+### Issue 1:
 client/src/pages/Home.tsx
 Line 134 — hero paragraph:
 
@@ -169,7 +169,7 @@ client/src/pages/Services.tsx (borderline — "statewide" framing tied to covera
 Line 52: county courts statewide. → county courts in our service area.
 Line 110: Statewide rush coverage → Rush coverage across our 6 service counties
 
-Issue 2:
+### Issue 2:
 client/src/pages/Home.tsx
 Deleted the testimonials const array (3 fake quotes) and the credentials const array.
 Deleted the "Licensed, Bonded & Insured" bullet item from the Why Choose Us list.
@@ -207,41 +207,24 @@ Deleted the { icon: Shield, text: "Licensed & bonded professionals" } entry from
 
 Verified clean with `npx tsc --noEmit` — no unused-import or reference errors after all deletions.
 
-
-
-Issue 2 — Remove fabricated trust content: testimonials, credentials, About team bios
-
-client/src/pages/Home.tsx
-
-Delete lines 62–81 — testimonials const array
-Delete lines 83–90 — credentials const array
-Delete lines 265–269 — the "Licensed, Bonded & Insured" bullet item from the Why Choose Us list
-Delete lines 319–332 — the floating "Our Credentials" card
-Delete lines 338–374 — the entire Testimonials section
-Line 148: ["Licensed & Bonded", "6 Denver Metro Counties", "Same-Day Available"] → ["6 Denver Metro Counties", "Same-Day Available"]
-Line 12 import: remove Star and Shield (both become unused after the above deletions)
-client/src/pages/Services.tsx
-
-Delete lines 299–324 — the entire Credentials section
-Line 10 import: remove Shield (becomes unused)
-client/src/pages/About.tsx
-
-Delete lines 13–32 — teamMembers const array (Robert J. Harmon, Maria Elena Castillo, David K. Thornton)
-Delete lines 34–65 — credentials const array
-Delete lines 238–281 — the entire "── TEAM ──" section
-Delete lines 283–318 — the entire "── CREDENTIALS ──" (Licensing & Credentials) section
-Line 9 import: remove Shield, Award, Lock, CheckCircle, Users (all become unused)
+### Issue 3+4 (combined — Update business hours to Mon–Sun 8am–5pm; Remove Contact page address + map):
+client/src/pages/Contact.tsx
+Lines 117–119 — business hours: replace the three-row list with one row:
+OLD:
+{ day: "Monday – Friday", hours: "7:00 AM – 7:00 PM" },
+{ day: "Saturday", hours: "8:00 AM – 4:00 PM" },
+{ day: "Sunday", hours: "Closed (Emergency only)" },
+NEW:
+{ day: "Monday – Sunday", hours: "8:00 AM – 5:00 PM" },
+Delete lines 94–105 — the Address block (MapPin icon, "1700 Lincoln Street, Suite 2000, Denver, CO 80203").
+Delete lines 245–275 — the entire "Map" block (MapView/geocoder usage).
+Line 10 — remove the now-unused import: import { MapView } from "@/components/Map";
+Line 9 — remove MapPin from the lucide-react import (only used in the address block being deleted):
+OLD: import { Phone, Mail, MapPin, Clock, CheckCircle, ArrowRight } from "lucide-react";
+NEW: import { Phone, Mail, Clock, CheckCircle, ArrowRight } from "lucide-react";
+Note: removing the Map block removes the site's only usage of the Google Maps MapView component, resolving the VITE_FRONTEND_FORGE_API_KEY dependency flagged earlier.
 client/src/components/Footer.tsx
-
-Delete lines 134–157 — the "Credentials" column block
-Line 61: Licensed, bonded, and serving Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties. → Serving Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties.
-Line 6 import: remove Shield (becomes unused)
-client/src/components/Navbar.tsx
-
-Line 74: Serving Adams, Arapahoe, Boulder, Denver, Douglas & Jefferson · Licensed & Bonded → Serving Adams, Arapahoe, Boulder, Denver, Douglas & Jefferson
+Line 78: <span>Mon–Fri: 7am–7pm<br />Sat: 8am–4pm</span> → <span>Mon–Sun: 8am–5pm</span>
 client/src/pages/Quote.tsx
-
-Line 98: ["Licensed & Bonded", "GPS-Verified", "Court-Admissible"] → ["GPS-Verified", "Court-Admissible"]
-Delete line 388 — { icon: Shield, text: "Licensed & bonded professionals" }, from the "What to Expect" list
-(Shield import stays — still used at line 342)
-Want me to add this to the doc as-is, or adjust anything first?
+Line 95: <span className="font-semibold text-[#0F2744]">Response within 1 hour</span> · Mon–Fri 7am–7pm · Sat 8am–4pm → · Mon–Sun 8am–5pm
+Line 375: Mon–Fri 7am–7pm · Sat 8am–4pm → Mon–Sun 8am–5pm
