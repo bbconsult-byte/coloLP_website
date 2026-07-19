@@ -75,7 +75,7 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-2.5 text-white/70">
                 <Clock size={14} className="text-[#B8963E] shrink-0 mt-0.5" />
-                <span>Mon–Fri: 7am–7pm<br />Sat: 8am–4pm</span>
+                <span>Mon–Sun: 8am–5pm</span>
               </div>
             </div>
             {/* Social icons */}
