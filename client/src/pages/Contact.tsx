@@ -10,10 +10,7 @@ import { Phone, Mail, MapPin, Clock, CheckCircle, ArrowRight } from "lucide-reac
 import { MapView } from "@/components/Map";
 
 const coloradoCounties = [
-  "Adams", "Arapahoe", "Boulder", "Broomfield", "Denver", "Douglas",
-  "El Paso", "Elbert", "Fremont", "Garfield", "Jefferson", "La Plata",
-  "Larimer", "Mesa", "Montrose", "Pueblo", "Routt", "Summit",
-  "Teller", "Weld", "+ All 64 Colorado Counties",
+  "Adams", "Arapahoe", "Boulder", "Denver", "Douglas", "Jefferson",
 ];
 
 export default function Contact() {

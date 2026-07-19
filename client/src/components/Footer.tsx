@@ -24,9 +24,7 @@ const quickLinks = [
 ];
 
 const counties = [
-  "Denver", "Jefferson", "Arapahoe", "Adams", "Douglas",
-  "El Paso", "Boulder", "Larimer", "Weld", "Pueblo",
-  "Mesa", "Garfield", "La Plata", "Fremont", "Montrose",
+  "Denver", "Jefferson", "Arapahoe", "Adams", "Douglas", "Boulder",
 ];
 
 export default function Footer() {
@@ -60,7 +58,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-5">
-              Colorado's trusted process serving and investigative services partner. Licensed, bonded, and serving all 64 counties statewide.
+              Colorado's trusted process serving and investigative services partner. Licensed, bonded, and serving Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties.
             </p>
             <div className="space-y-2.5 text-sm">
               <a href="tel:7205550192" className="flex items-center gap-2.5 text-white/70 hover:text-[#B8963E] transition-colors">
@@ -173,9 +171,6 @@ export default function Footer() {
                   {county}
                 </span>
               ))}
-              <span className="text-xs text-[#B8963E] font-semibold px-2 py-0.5">
-                + All 64 Counties
-              </span>
             </div>
             <div className="mt-5 p-3 bg-[#B8963E]/10 border border-[#B8963E]/30 rounded text-sm">
               <p className="text-[#B8963E] font-semibold mb-1">Rush Service Available</p>

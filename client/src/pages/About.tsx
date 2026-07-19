@@ -77,8 +77,8 @@ const whyChooseUs = [
   },
   {
     icon: MapPin,
-    title: "True Statewide Coverage",
-    desc: "Unlike services that only cover the Denver metro, we have established networks in all 64 Colorado counties — from Telluride to Yuma, from Fort Collins to Pueblo.",
+    title: "Focused Denver Metro Coverage",
+    desc: "We serve Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties with deep local knowledge of each county's courts and procedures.",
   },
   {
     icon: Phone,
@@ -108,7 +108,7 @@ export default function About() {
             </h1>
             <div className="gold-rule" />
             <p className="text-white/75 text-base leading-relaxed">
-              For over two decades, we've been the process serving and investigative services company that Colorado's legal community relies on when accuracy, reliability, and discretion are non-negotiable.
+              For 6 years, we've been the process serving and investigative services company that Colorado's legal community relies on when accuracy, reliability, and discretion are non-negotiable.
             </p>
           </div>
         </div>
@@ -130,13 +130,13 @@ export default function About() {
               <div className="gold-rule" />
               <div className="space-y-4 text-[#3D4F61] text-base leading-relaxed">
                 <p>
-                  Colorado Legal Process & Investigations was founded in 2004 by Robert J. Harmon, a former paralegal who recognized a critical gap in the market: Colorado's legal community needed a process serving company that combined the reliability of a large firm with the personal attention of a local partner.
+                  Colorado Legal Process & Investigations was founded in 2020 by Robert J. Harmon, a former paralegal who recognized a critical gap in the market: Colorado's legal community needed a process serving company that combined the reliability of a large firm with the personal attention of a local partner.
                 </p>
                 <p>
                   Starting with just a handful of clients in the Denver metro area, we built our reputation one assignment at a time — through meticulous documentation, prompt communication, and an unwavering commitment to getting it right. Word spread quickly among Colorado's legal community, and our client base grew to include some of the state's most respected law firms.
                 </p>
                 <p>
-                  Today, we serve all 64 Colorado counties with a network of licensed professionals who share our founding values. Whether it's a routine civil summons in Denver or a complex surveillance operation in a rural mountain county, we bring the same standard of excellence to every assignment.
+                  Today, we serve Adams, Arapahoe, Boulder, Denver, Douglas, and Jefferson counties with a network of licensed professionals who share our founding values. Whether it's a routine civil summons in Denver or a background investigation in Boulder, we bring the same standard of excellence to every assignment.
                 </p>
               </div>
             </div>
@@ -152,8 +152,8 @@ export default function About() {
               <div className="absolute -bottom-6 -right-4 bg-[#0F2744] rounded-lg p-5 shadow-xl">
                 <div className="grid grid-cols-2 gap-4 text-center">
                   {[
-                    { value: "20+", label: "Years" },
-                    { value: "64", label: "Counties" },
+                    { value: "6", label: "Years" },
+                    { value: "6", label: "Counties" },
                     { value: "15K+", label: "Served" },
                     { value: "98%", label: "On-Time" },
                   ].map((stat) => (
