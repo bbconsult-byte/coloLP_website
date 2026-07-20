@@ -229,13 +229,12 @@ client/src/pages/Quote.tsx
 Line 95: <span className="font-semibold text-[#0F2744]">Response within 1 hour</span> · Mon–Fri 7am–7pm · Sat 8am–4pm → · Mon–Sun 8am–5pm
 Line 375: Mon–Fri 7am–7pm · Sat 8am–4pm → Mon–Sun 8am–5pm
 
-
-### Issue 5  Remove Resources "Forms & Reference Guides" section, and removed the articles descriptions
+Issue 5 — Remove Resources "Forms & Reference Guides" section; replace article excerpts with TBD:
 client/src/pages/Resources.tsx
-Deleted lines 100–125 — the downloads const array.
-Deleted lines 273–317 — the entire "── DOWNLOADS ──" section.
-Line 9 import: removed FileText and Download (both became unused after the above deletion). Left BookOpen in place — it was already unused before this ticket, out of scope here.
-Articles: kept category, title, readTime, date, and slug for all 6 entries — replaced only the excerpt value with "TBD" in each:
+Delete lines 100–125 — the downloads const array.
+Delete lines 273–317 — the entire "── DOWNLOADS ──" section.
+Line 9 import: remove FileText and Download (both become unused after the above deletion).
+Articles: keep category, title, readTime, date, and slug for all 6 entries — only replace the excerpt value with "TBD" in each:
 Line 18 — Process Serving / "What Is Proper Service of Process in Colorado?"
 Line 26 — Process Serving / "How Long Does Process Serving Take in Colorado?"
 Line 34 — Legal Procedures / "Colorado Eviction Process: A Step-by-Step Guide"
