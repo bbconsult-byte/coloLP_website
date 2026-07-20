@@ -56,7 +56,6 @@ const trustStats = [
   { value: "6+", label: "Years in Business", icon: Award },
   { value: "6", label: "Colorado Counties", icon: MapPin },
   { value: "15,000+", label: "Documents Served", icon: FileText },
-  { value: "98%", label: "On-Time Rate", icon: CheckCircle },
 ];
 
 export default function Home() {
@@ -71,11 +70,6 @@ export default function Home() {
           background: "linear-gradient(135deg, #0F2744 0%, #1a3a5c 50%, #0d2035 100%)",
         }}
       >
-        {/* Background image overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: "url('/manus-storage/hero-courthouse_e8a70c36.jpg')" }}
-        />
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F2744]/90 via-[#0F2744]/70 to-transparent" />
 
@@ -217,7 +211,7 @@ export default function Home() {
       {/* ── WHY CHOOSE US ── */}
       <section className="py-16 bg-[#F4F5F7]">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-2xl">
             <div>
               <span className="section-label">Why Choose Us</span>
               <h2
@@ -271,17 +265,6 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-
-            {/* Image + credentials */}
-            <div className="relative">
-              <div className="rounded overflow-hidden shadow-xl">
-                <img
-                  src="/manus-storage/process-serving_203f2aaa.jpg"
-                  alt="Professional legal process serving"
-                  className="w-full h-72 object-cover"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -314,11 +297,11 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="rounded overflow-hidden shadow-2xl">
+            <div className="rounded overflow-hidden shadow-2xl bg-white flex items-center justify-center">
               <img
-                src="/manus-storage/colorado-mountains_5be37104.jpg"
-                alt="Colorado Legal Process service area"
-                className="w-full h-80 object-cover"
+                src="/logos/logo.jpg"
+                alt="Colorado Legal Process Picture"
+                className="w-full h-96 object-contain p-8"
               />
             </div>
           </div>
