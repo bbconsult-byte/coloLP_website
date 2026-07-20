@@ -77,7 +77,7 @@ These follow directly from Rory's confirmed instructions and are being applied i
 | 4 | Remove Contact page address + map | `content/remove-contact-address-map` | Contact.tsx (also drops the Google Maps/Forge API key dependency flagged earlier) |
 
 
-| 5 | Remove Resources "Forms & Reference Guides" section | `content/remove-resources-downloads` | Resources.tsx |
+| 5 | Remove Resources "Forms & Reference Guides" section, just removed the articles descriptions | `content/remove-resources-downloads` | Resources.tsx |
 
 ---
 

@@ -97,32 +97,6 @@ const faqs = [
   },
 ];
 
-const downloads = [
-  {
-    title: "Colorado Process Serving Checklist",
-    desc: "A practical checklist for attorneys and paralegals to ensure all service requirements are met.",
-    type: "PDF",
-    size: "124 KB",
-  },
-  {
-    title: "Proof of Service Affidavit Template",
-    desc: "A Colorado-compliant proof of service affidavit template for use in state court proceedings.",
-    type: "DOCX",
-    size: "48 KB",
-  },
-  {
-    title: "Colorado County Court Directory",
-    desc: "Contact information and filing requirements for all Colorado county and district courts.",
-    type: "PDF",
-    size: "312 KB",
-  },
-  {
-    title: "Eviction Notice Requirements by County",
-    desc: "A reference guide to notice requirements and service rules for eviction proceedings by county.",
-    type: "PDF",
-    size: "186 KB",
-  },
-];
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
@@ -267,52 +241,6 @@ export default function Resources() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ── DOWNLOADS ── */}
-      <section className="py-16 bg-[#F4F5F7]">
-        <div className="container">
-          <div className="max-w-xl mb-10">
-            <span className="section-label">Downloads</span>
-            <h2
-              className="text-[#0F2744] mt-2 mb-3"
-              style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700 }}
-            >
-              Forms & Reference Guides
-            </h2>
-            <div className="gold-rule" />
-            <p className="text-[#3D4F61] text-sm leading-relaxed">
-              Downloadable resources for attorneys, paralegals, and legal professionals working with Colorado courts.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {downloads.map((dl, i) => (
-              <div
-                key={dl.title}
-                className="bg-white rounded-lg border border-[#e8eaed] p-5 flex items-start gap-4 hover:shadow-md transition-shadow animate-fade-in-up"
-                style={{ animationDelay: `${i * 60}ms` }}
-              >
-                <div className="w-10 h-10 rounded bg-[#0F2744]/8 flex items-center justify-center shrink-0">
-                  <FileText size={18} className="text-[#2E6DA4]" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-bold text-[#0F2744] text-sm mb-1">{dl.title}</h4>
-                  <p className="text-[#3D4F61] text-xs leading-relaxed mb-2">{dl.desc}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-[#6B7C8D]">{dl.type} · {dl.size}</span>
-                    <button className="flex items-center gap-1.5 text-xs font-semibold text-[#2E6DA4] hover:text-[#0F2744] transition-colors">
-                      <Download size={12} />
-                      Download
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-[#6B7C8D] text-xs mt-4 text-center">
-            * Downloadable forms are provided as general references only and do not constitute legal advice. Consult an attorney for guidance on your specific situation.
-          </p>
         </div>
       </section>
 
