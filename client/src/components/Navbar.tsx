@@ -81,9 +81,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <img
-              src="/manus-storage/logo-shield_c5626bc0.png"
+              src="/logos/face.jpg"
               alt="Colorado Legal Process Shield"
-              className="h-10 w-10 object-contain"
+              className="h-10 w-10 object-contain rounded"
             />
             <div>
               <div
